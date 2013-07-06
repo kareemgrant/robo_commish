@@ -1,0 +1,14 @@
+= provide(:title, "Create New League")
+
+%h3 Create a New League
+
+.row
+  .span6
+    = simple_form_for(@league) do |f|
+      = f.input :name, label: "League Name"
+
+      = f.input :fee, label: "League Fee"
+
+      %br
+
+      = f.submit "Create League", class: 'btn btn-primary'

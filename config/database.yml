@@ -1,0 +1,25 @@
+development:
+  adapter: postgresql
+  database: robo_commish_dev
+  encoding: unicode
+  pool: 5
+  username:
+  password: 
+
+test:
+  adapter: postgresql
+  database: robo_commish_test 
+  encoding: unicode
+  pool: 5
+  username:
+  password: 
+  min_messages: WARNING
+
+production:
+  adapter: postgresql
+  database: robo_commish_prod
+  encoding: unicode
+  pool: 5
+  username:
+  password: 
+
