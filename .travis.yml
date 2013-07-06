@@ -1,6 +1,9 @@
 before_script:
   - psql -c 'create database robo_commish_test;' -U postgres
-
+script: 
+  - bundle exec rake db:schema:load
+  - bundle exec rake db:test:prepare
+  - bundle exec rake spec
 language: ruby
 rvm:
   - 1.9.3
