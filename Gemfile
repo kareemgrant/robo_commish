@@ -38,5 +38,6 @@ group :test do
   gem 'jasmine'
   gem 'vcr'
   gem 'database_cleaner'
+  gem 'rake'
 end
 

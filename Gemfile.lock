@@ -243,6 +243,7 @@ DEPENDENCIES
   pry
   quiet_assets
   rails (= 3.2.13)
+  rake
   rb-fsevent (~> 0.9)
   reek
   rspec-rails
