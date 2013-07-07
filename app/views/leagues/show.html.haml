@@ -5,3 +5,20 @@
 
 %h4 League Fee
 %p= @league.fee
+
+%h4
+  Members
+- if @league.members.present?
+  %table.table.table-striped.table-bordered
+    %thead
+      %tr
+        %th Name
+        %th Email
+        %th Phone
+    %tbody
+      = render partial: "members/member", locals: {members: @league.members}
+- else
+  %h5 This League currently does not have any members
+
+= link_to "Add new member", new_league_member_path(@league), id: "new_member"
+

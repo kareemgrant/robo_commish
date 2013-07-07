@@ -5,6 +5,7 @@ gem 'pg'
 gem 'unicorn'
 gem "haml-rails"
 gem 'simple_form'
+gem 'phony_rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
