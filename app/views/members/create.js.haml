@@ -1,0 +1,3 @@
+$('#new_member').remove();
+$('#new_member_link').show();
+$('#leagueTable tr:last').after('#{escape_javascript(render(:partial => "members/new_member", :locals => {member: @member}))}');

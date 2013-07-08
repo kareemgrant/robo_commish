@@ -4,10 +4,9 @@
 
 .row
   .span6
-    = simple_form_for(@league) do |f|
+    = simple_form_for @league do |f|
       = f.input :name, label: "League Name"
-
-      = f.input :fee, label: "League Fee"
+      = f.input :fee_in_dollars, label: "League Fee"
 
       %br
 

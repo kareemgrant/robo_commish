@@ -1,6 +1,6 @@
-= simple_form_for([@league, @member], :html => { :class => 'form-inline' }) do |f|
-  = f.input_field :name, :placeholder => "Full Name"
-  = f.input_field :email, :placeholder => "Email Address"
-  = f.input_field :phone, :placeholder => "Mobile Phone"
+= simple_form_for [@league, @member], :html => { :class => 'form-inline'}, remote: true do |f|
+  = f.input :name, :placeholder => "Full Name"
+  = f.input :email, :placeholder => "Email Address"
+  = f.input :phone, :placeholder => "Mobile Phone"
   = f.submit :submit, :class => 'btn'
 

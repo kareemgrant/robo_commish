@@ -6,6 +6,8 @@ gem 'unicorn'
 gem "haml-rails"
 gem 'simple_form'
 gem 'phony_rails'
+gem 'client_side_validations'
+gem 'client_side_validations-simple_form'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -30,6 +32,7 @@ group :development, :test do
   gem 'rb-fsevent', '~> 0.9'
   gem 'simplecov'
   gem 'factory_girl_rails'
+  gem 'dotenv-rails'
 end
 
 group :test do

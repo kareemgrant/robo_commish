@@ -4,21 +4,23 @@
 %p= @league.name
 
 %h4 League Fee
-%p= @league.fee
+%p= number_to_currency(@league.fee_in_dollars)
 
-%h4
-  Members
-- if @league.members.present?
-  %table.table.table-striped.table-bordered
-    %thead
-      %tr
-        %th Name
-        %th Email
-        %th Phone
-    %tbody
-      = render partial: "members/member", locals: {members: @league.members}
-- else
-  %h5 This League currently does not have any members
+%h4= link_to "Send League Intro Email", href: "#"
+%br
 
-= link_to "Add new member", new_league_member_path(@league), id: "new_member"
+%h4 Members
+%table#leagueTable.table.table-striped.table-bordered
+  %thead
+    %tr
+      %th Name
+      %th Email
+      %th Phone
+      %th Balance
+      %th Options
+
+  %tbody
+    = render partial: "members/member", locals: {members: @league.members}
+
+= link_to "Add new member", new_league_member_path(@league), id: "new_member_link", remote: true
 

@@ -23,4 +23,4 @@ solr/data
 .zeus.sock*
 zeus.json
 /config/application.yml
-
+.env

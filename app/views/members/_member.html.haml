@@ -1,5 +1,7 @@
-- members.each do |member|
-  %tr
-    %td= member.name
-    %td= member.email
-    %td= member.phone
+- if members.present?
+  - members.each do |member|
+    = render partial: "members/new_member", locals: {member: member}
+
+- else
+  %tr 
+    %td{:colspan => '4'} No Members found for this league

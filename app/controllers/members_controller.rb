@@ -6,10 +6,14 @@ class MembersController < ApplicationController
 
   def create
     @member = Member.new(params[:member].merge(league_id: params[:league_id]))
-    if @member.save
-      redirect_to league_path(params[:league_id]), notice: "Member was successfully added"
-    else
-      redirect_to league_path(params[:league_id]), alert: "Unable to create member"
+    respond_to do |format|
+      if @member.save
+        format.html {redirect_to league_path(params[:league_id]), notice: "Member was successfully added" }
+        format.js
+      else
+        format.html {redirect_to league_path(params[:league_id]), alert: "Unable to create member" }
+        format.js
+      end
     end
   end
 end

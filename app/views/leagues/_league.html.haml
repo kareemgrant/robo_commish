@@ -1,4 +1,4 @@
 %tr
   %td= link_to league.name, league_path(league)
-  %td= league.fee
+  %td= number_to_currency(league.fee_in_dollars)
 
